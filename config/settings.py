@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'config',
+    'core',
+    # STOK
+    'inventory',
+
 ]
 
 MIDDLEWARE = [
@@ -125,8 +129,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 UNFOLD = {
-    "SITE_TITLE": "Strategix Suite CRM",
-    "SITE_HEADER": "Strategix Suite",
+    "SITE_TITLE": "Propelix Suite CRM",
+    "SITE_HEADER": "Propelix Suite",
     "SITE_URL": "/",
     "SITE_SYMBOL": "speed",
     "SHOW_HISTORY": True,
@@ -180,10 +184,23 @@ UNFOLD = {
                 "separator": True,
                 "items": [
                     {
-                        "title": _("Müşteriler"),
-                        "icon": "people",
+                        "title": _("Ürünleriniz"),
+                        "icon": "box",
                         "link": "/admin/customers/customer/",
                     },
+                    {
+                        "title": _("Ürün Kategorileriniz"),
+                        "icon": "category",
+                        "link": "/admin/inventory/category",
+                    },
+                    {
+                        "title": _("Ürün Markalarınız"),
+                        "icon": "raven",
+                        "link": "/admin/inventory/brand/",
+                    },
+
+
+                    
                 ],
             },
             {
